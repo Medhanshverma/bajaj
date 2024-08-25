@@ -40,7 +40,7 @@ export default function Home() {
         throw new Error("Invalid JSON format. Make sure it includes an array under the 'data' key.");
       }
   
-      const res = await axios.post('http://localhost:3000/bfhl', parsedInput);
+      const res = await axios.post('https://bajaj-3-9d33.onrender.com/bfhl', parsedInput);
   
       setResponse(res.data);
       setError(null);
@@ -78,6 +78,7 @@ export default function Home() {
   return (
     <div className="container">
       <h1>Roll Number: {rollNumber}</h1>
+      <p>As I am using free instance it will spin down with inactivity, which can delay requests by 50 seconds or more.Please send the api request and re-submit after 50 second</p>
       <div className="input-container">
         <label htmlFor="json-input">API Input</label>
         <textarea
