@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     const fetchRollNumber = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/bfhl');
+        const res = await axios.get('https://bajaj-3-9d33.onrender.com/bfhl');
         setRollNumber(res.data.roll_number || 'Unknown Roll Number');
         document.title = res.data.roll_number || 'Default Title';
       } catch (err) {
